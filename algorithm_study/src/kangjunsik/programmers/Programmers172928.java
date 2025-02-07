@@ -2,7 +2,7 @@ package kangjunsik.programmers;
 
 /**
  * https://school.programmers.co.kr/learn/courses/30/lessons/172928
- * °ø¿ø »êÃ¥
+ * ê³µì› ì‚°ì±…
  */
 
 public class Programmers172928 {
