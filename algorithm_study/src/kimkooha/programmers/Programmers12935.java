@@ -1,4 +1,4 @@
-package kimkooha.programmers;
+package programmers;
 
 /**
  * https://school.programmers.co.kr/learn/courses/30/lessons/12935
