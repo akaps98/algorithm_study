@@ -5,7 +5,7 @@ package programmers;
  * left와 right가 매개변수로 주어지고, 약수의 갯수만큼 홀수면 - 짝수면 +
  * ex) left=13, 약수 : 1, 13, 짝수= +13,     right=16, 약수 : 1,2,4,8,16, -> 홀수= -16
  */
-public class Programmers12910 {
+public class Programmers77884 {
     class Solution {
         public int solution(int left, int right) {
             int answer = 0;

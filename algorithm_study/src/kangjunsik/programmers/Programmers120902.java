@@ -2,24 +2,24 @@ package kangjunsik.programmers;
 
 /**
  * https://school.programmers.co.kr/learn/courses/30/lessons/120902
- * ¹®ÀÚ¿­ °è»êÇÏ±â
+ * ????? ??????
  */
 
 public class Programmers120902 {
     public static int solution(String my_string) {
-        String[] splitString = my_string.split(" "); // °ø¹éÀ¸·Î ³ª´² ¸ğµç ¹®ÀÚ ¹è¿­È­
+        String[] splitString = my_string.split(" "); // ???????? ???? ??? ???? ?è¿­?
 
-        int answer = Integer.parseInt(splitString[0]); // Ã¹ ¼ıÀÚ´Â ¹Ì¸® ÀúÀå
+        int answer = Integer.parseInt(splitString[0]); // ? ????? ??? ????
 
-        for(int i = 1; i < splitString.length; i++) { // splitString ¼øÈ¸
-            if(i == splitString.length - 1) { // ¼øÈ¸ ÀÌ¹Ì Á¾·á. ÀÌ ÀÌ»ó ÁøÇàÇÒ ½Ã outOfIndex. error exception
+        for(int i = 1; i < splitString.length; i++) { // splitString ???
+            if(i == splitString.length - 1) { // ??? ??? ????. ?? ??? ?????? ?? outOfIndex. error exception
                 break;
             }
             
-            if(i % 2 == 1) { // ¹è¿­ÀÇ È¦¼ö¹øÂ° ÀÎµ¦½º¿¡ ÀÖ´Â °ªÀº ¹İµå½Ã operator
+            if(i % 2 == 1) { // ?è¿­?? ?????Â° ?Îµ????? ??? ???? ???? operator
                 String op = splitString[i];
 
-                // operator °ª¿¡ µû¶ó °è»ê ÁøÇà. ÇöÀç ¿¬»êÀÚ µÚ¿¡ ÀÖ´Â ¼ıÀÚ¸¦ ¿ø·¡ÀÇ answer °ª¿¡ ´õÇØÁÖ°Å³ª »«´Ù.
+                // operator ???? ???? ??? ????. ???? ?????? ??? ??? ????? ?????? answer ???? ???????? ????.
                 answer = op.equals("+") ? answer + Integer.parseInt(splitString[i + 1]) : answer - Integer.parseInt(splitString[i + 1]);
             }
         }
