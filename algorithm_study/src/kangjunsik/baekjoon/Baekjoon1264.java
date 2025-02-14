@@ -1,5 +1,10 @@
 package kangjunsik.baekjoon;
 
+/**
+ * https://www.acmicpc.net/problem/1264
+ * 모음의 갯수
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

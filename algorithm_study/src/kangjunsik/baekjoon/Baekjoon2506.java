@@ -1,5 +1,10 @@
 package kangjunsik.baekjoon;
 
+/**
+ * https://www.acmicpc.net/problem/2506
+ * 점수 계산
+ */
+
 import java.io.*;
 
 public class Baekjoon2506 {

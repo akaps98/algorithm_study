@@ -1,5 +1,10 @@
 package kangjunsik.baekjoon;
 
+/**
+ * https://www.acmicpc.net/problem/1267
+ * 핸드폰 요금
+ */
+
 import java.util.*;
 
 public class Baekjoon1267 {
