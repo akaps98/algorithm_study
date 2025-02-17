@@ -8,6 +8,7 @@ package kangjunsik.programmers;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Programmers131128 {
@@ -29,16 +30,14 @@ public class Programmers131128 {
             checkY.put(digit, checkY.getOrDefault(digit, 0) + 1);
         }
 
-        ArrayList<Integer> sameNumber = new ArrayList<>();
-
+        List<Integer> sameNumber = new ArrayList<>();
         for(Map.Entry<Integer, Integer> xEntry : checkX.entrySet()) {
-            for(Map.Entry<Integer, Integer> yEntry : checkY.entrySet()) {
-                if(xEntry.getKey() == yEntry.getKey()) { // key 값(중복된 숫자)를 찾고
-                    int duplicated = Math.min(xEntry.getValue(), yEntry.getValue()); // 몇 번 중복되었는가?
+            if (checkY.containsKey(xEntry.getKey())) { // 중복되는 숫자 찾으면
+                int dupVal = checkY.get(xEntry.getKey());
+                int duplicated = Math.min(xEntry.getValue(), dupVal); // 몇 번 중복되었는가?
 
-                    for(int i = 0; i < duplicated; i++) {
-                        sameNumber.add(xEntry.getKey()); // 중복된 숫자들을 중복된 만큼 sameNumber에 넣어줌
-                    }
+                for(int i = 0; i < duplicated; i++) {
+                    sameNumber.add(xEntry.getKey()); // 중복된 숫자들을 중복된 만큼 sameNumber에 넣어줌
                 }
             }
         }
@@ -60,10 +59,8 @@ public class Programmers131128 {
 
         answer = sb.toString();
 
-        for(int i = 0; i < answer.length(); i++) {
-            if(answer.charAt(i) != '0') { // 숫자중 하나라도 0을 포함하지 않으면 상관없다
-                return answer; // 그대로 리턴
-            }
+        if (!answer.startsWith("0")) { // 숫자가 0으로 시작하면 그건 모든 자리의 숫자가 0이다(이미 정렬 해놨음)
+            return answer;
         }
 
         answer = "0"; // for-loop가 종료됐는데 리턴 안했다면, 모든 숫자가 0이라는 소리. 0을 return 해야한다
