@@ -1,5 +1,10 @@
 package kangjunsik.programmers;
 
+/**
+ * https://school.programmers.co.kr/learn/courses/30/lessons/12943
+ * 콜라츠 추측
+ */
+
 public class Programmers12943 {
     public static void main(String[] args) {
         System.out.println(solution(626331));
