@@ -3,6 +3,8 @@ package kangjunsik.programmers;
 /**
  * https://school.programmers.co.kr/learn/courses/30/lessons/42748 
  * k번째수
+ * 어려웠던 부분: 숫자가 두자리수 일시, 문자열로 편집하기 힘듬. split 사용시에! 
+ * ex) [5,8,9] -> 589로 변환해서 사용하면 끝인데, [10,7,22] -> 10722로 변환되어 계산하기 힘들다.
  */
 
 import java.util.ArrayList;
